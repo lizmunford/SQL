@@ -1,7 +1,5 @@
 # Create defenses for incoming suits
 
-
-
 CREATE TABLE Defenses (id INTEGER PRIMARY KEY, Defense TEXT, Amount INTEGER, Dismissed INTEGER, Active TEXT);
 
 INSERT INTO Defenses VALUES (1, "Exhaustion", 50,40,10);
@@ -20,6 +18,8 @@ INSERT INTO Defenses VALUES (13, "Statute of Limitations",2,1,1);
 INSERT INTO Defenses VALUES (14, "Missing Bills", 8,4,4);
 INSERT INTO Defenses VALUES (15, "Untimely Billing", 6,4,2);
 
-SELECT * FROM Defenses ORDER BY Active;
+--Display database ordered by dismissed suits.
 SELECT SUM(dismissed) FROM Defenses;
+
+--Display database ordered by active suits.
 SELECT SUM(active) FROM Defenses;
