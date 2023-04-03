@@ -1,0 +1,25 @@
+# Create defenses for incoming suits
+
+
+
+CREATE TABLE Defenses (id INTEGER PRIMARY KEY, Defense TEXT, Amount INTEGER, Dismissed INTEGER, Active TEXT);
+
+INSERT INTO Defenses VALUES (1, "Exhaustion", 50,40,10);
+INSERT INTO Defenses VALUES (2, "Demand Cured", 30, 25, 5);
+INSERT INTO Defenses VALUES (3, "BNA", 10,5,5);
+INSERT INTO Defenses VALUES (4, "OPPS", 6,0,6);
+INSERT INTO Defenses VALUES (5, "Coding Denial", 4,0,4);
+INSERT INTO Defenses VALUES (6, "Invalid Demand", 20,0,20);
+INSERT INTO Defenses VALUES (7, "Policy", 50,45,5);
+INSERT INTO Defenses VALUES (8, "2007 Limiting Charge", 6,2,4);
+INSERT INTO Defenses VALUES (9, "Prior Dismissal with Prejudice", 18,12,6);
+INSERT INTO Defenses VALUES (10, "Duplicate Suit to Active Suit Pending", 14,12,2);
+INSERT INTO Defenses VALUES (11, "No Assignment of Benefits", 14,0,14);
+INSERT INTO Defenses VALUES (12, "Settlement", 10,5,5);
+INSERT INTO Defenses VALUES (13, "Statute of Limitations",2,1,1);
+INSERT INTO Defenses VALUES (14, "Missing Bills", 8,4,4);
+INSERT INTO Defenses VALUES (15, "Untimely Billing", 6,4,2);
+
+SELECT * FROM Defenses ORDER BY Active;
+SELECT SUM(dismissed) FROM Defenses;
+SELECT SUM(active) FROM Defenses;
